@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="First JSF:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/First_JSF_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="First JSF Examples/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="First JSF Examples" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Mojarra-2.2.1" />
+        </element>
+        <element id="library" level="project" name="Mojarra-2.2.1" />
+      </element>
+    </root>
+  </artifact>
+</component>
