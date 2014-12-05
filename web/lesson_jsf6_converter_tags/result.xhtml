@@ -6,6 +6,8 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="#{usingXml.message}"/>
+    <h:outputLabel value="#{userDataConvertTags.date}">
+        <f:convertDateTime pattern="dd-mm-yyyy"/>
+    </h:outputLabel>
 </f:view>
 </html>

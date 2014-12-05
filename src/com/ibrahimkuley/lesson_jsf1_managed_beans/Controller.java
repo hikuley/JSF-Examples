@@ -1,4 +1,4 @@
-package com.ibrahimkuley.lesson_jsf_managed_beans_1;
+package com.ibrahimkuley.lesson_jsf1_managed_beans;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -11,7 +11,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class Controller {
 
-    @ManagedProperty(value = "#{message}")
+    @ManagedProperty(value = "#{message}") // dipency injection = autowired
     private Message messageBean;
 
     private String message;
