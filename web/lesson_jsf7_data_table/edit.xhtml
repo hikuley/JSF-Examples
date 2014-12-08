@@ -39,57 +39,41 @@
                      styleClass="employeeTable"
                      headerClass="employeeTableHeader"
                      rowClasses="employeeTableOddRow,employeeTableEvenRow">
+
             <h:column>
                 <f:facet name="">Name</f:facet>
-                #{employee.name}
+                <h:inputText value="#{employee.name}" size="10" rendered="#{employee.canEdit}"/>
+                <h:outputText value="#{employee.name}" rendered="#{not employee.canEdit}"/><!-- inputu render ettik-->
             </h:column>
+
             <h:column>
-                <f:facet name="">Depertmant</f:facet>
-                #{employee.deparmant}
+                <f:facet name="">Name</f:facet>
+                <h:inputText value="#{employee.deparmant}" size="10" rendered="#{employee.canEdit}"/>
+                <h:outputText value="#{employee.deparmant}"
+                              rendered="#{not employee.canEdit}"/><!-- inputu render ettik-->
             </h:column>
+
             <h:column>
-                <f:facet name="">Age</f:facet>
-                #{employee.age}
+                <f:facet name="">Name</f:facet>
+                <h:inputText value="#{employee.age}" size="10" rendered="#{employee.canEdit}"/>
+                <h:outputText value="#{employee.age}" rendered="#{not employee.canEdit}"/><!-- inputu render ettik-->
             </h:column>
+
             <h:column>
-                <f:facet name="">Salary</f:facet>
-                #{employee.salary}
+                <f:facet name="">Name</f:facet>
+                <h:inputText value="#{employee.salary}" size="10" rendered="#{employee.canEdit}"/>
+                <h:outputText value="#{employee.salary}" rendered="#{not employee.canEdit}"/><!-- inputu render ettik-->
             </h:column>
+
             <h:column>
-                <f:facet name="">Delete</f:facet>
-                <h:commandButton value="Delete" action="#{userDateTable.deleteEmployee}">
-                    <f:setPropertyActionListener value="#{employee}" target="#{userDateTable.employee}"/>
+                <f:facet name="">Edit</f:facet>
+                <h:commandButton rendered="#{not employee.canEdit}" value="edit" action="#{userDateTable.editEmployee}">
+                <f:setPropertyActionListener value="#{employee}" target="#{userDateTable.employee}"/>
                 </h:commandButton>
             </h:column>
 
         </h:dataTable>
-
-        <hr/>
-        <h3>Add Employee</h3>
-        <table>
-            <tr>
-                <td>Name :</td>
-                <td><h:inputText size="10" value="#{userDateTable.name}"/></td>
-            </tr>
-            <tr>
-                <td>Department :</td>
-                <td><h:inputText size="20" value="#{userDateTable.department}"/></td>
-            </tr>
-            <tr>
-                <td>Age :</td>
-                <td><h:inputText size="5" value="#{userDateTable.age}"/></td>
-            </tr>
-            <tr>
-                <td>Salary :</td>
-                <td><h:inputText size="5" value="#{userDateTable.salary}"/></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <h:commandButton value="Add Employee" action="#{userDateTable.addEmployee}"/>
-                </td>
-            </tr>
-        </table>
+        <h:commandButton value="Save Employee" action="#{userDateTable.saveEmployee}"/>
     </h:form>
 </h:body>
 </html>

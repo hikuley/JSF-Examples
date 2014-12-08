@@ -17,7 +17,7 @@ public class Employee {
         this.deparmant = deparmant;
         this.age = age;
         this.salary = salary;
-        this.canEdit = canEdit;
+        canEdit = false;
     }
 
     public String getName() {
