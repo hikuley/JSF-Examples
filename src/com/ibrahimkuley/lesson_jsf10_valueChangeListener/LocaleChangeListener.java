@@ -17,5 +17,4 @@ public class LocaleChangeListener implements ValueChangeListener {
         personalData.setSelectedCountry(valueChangeEvent.getNewValue().toString());
     }
 
-
 }
